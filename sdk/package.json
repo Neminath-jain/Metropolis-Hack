@@ -1,0 +1,61 @@
+{
+  "name": "@aegis-monad/sdk",
+  "version": "0.1.0",
+  "description": "Developer-facing TypeScript SDK for Aegis-Monad smart vaults and AI agent delegation",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./mera": {
+      "types": "./dist/mera.d.ts",
+      "import": "./dist/mera.js",
+      "require": "./dist/mera.cjs"
+    },
+    "./testing": {
+      "types": "./dist/softwareAuthenticator.d.ts",
+      "import": "./dist/softwareAuthenticator.js",
+      "require": "./dist/softwareAuthenticator.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "codegen": "node scripts/generate-artifacts.cjs",
+    "build": "npm run codegen && tsup",
+    "test": "vitest run",
+    "lint": "tsc --noEmit && eslint src test"
+  },
+  "keywords": [
+    "monad",
+    "ai-agents",
+    "delegation",
+    "webauthn",
+    "passkeys",
+    "erc-8004",
+    "smart-vaults"
+  ],
+  "author": "Aegis-Monad Team",
+  "license": "MIT",
+  "peerDependencies": {
+    "viem": ">=2.20.0"
+  },
+  "dependencies": {
+    "@category-labs/mera": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "eslint": "^10.13.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.71.2",
+    "viem": "^2.23.0",
+    "vitest": "^3.0.0"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "chainId": 10143,
+  "network": "monad_testnet",
+  "contracts": {
+    "agentGuard": "0x10a59fbc6ffEebc8Fe17764C3e94Ba8136098618",
+    "registry": "0x8004A818BFB912233c491871b3d84c89A494BD9e",
+    "venue": "0xF9d1265d4f87B993244008A4DB8269119Dd19D1C",
+    "venueSelectors": {
+      "swap": "0x8a0ccd56"
+    },
+    "tokens": {
+      "tokenA": "0xBbBA05e4d10286Fdc21dEF5bbc674E6f9269bFa0",
+      "tokenB": "0x8D410373B5e6B3927d5CeE0Cc99a8a62556D59dD"
+    }
+  },
+  "agent": {
+    "address": "0x19615D52EdfF1c18941FC5BcE83Fb5c4C5F28eFd",
+    "agentId": 2372,
+    "registrationTx": "0xd907eba3e05e28e36bfbd5048d4c22f4a566e09b42b5b231f0e4bb46e7fcef10"
+  },
+  "verifiedExplorerUrl": "https://testnet.monadscan.com/address/0x10a59fbc6ffEebc8Fe17764C3e94Ba8136098618#code"
+}

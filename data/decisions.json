@@ -1,0 +1,50 @@
+[
+  {
+    "signals": {
+      "token_in": "0xb0F71e4a65baeF5ceC68184EFBDeD5e4FBaBF21B",
+      "token_out": "0x735F1Ba389D9D350501dB8FBbB5b52477DcaddA8",
+      "price": 1.0144,
+      "moving_average_1h": 1.0,
+      "volume_24h": 150000.0,
+      "timestamp": 1792321759,
+      "is_mock": true,
+      "source": "MOCK-DETERMINISTIC"
+    },
+    "decision": {
+      "action": "BUY",
+      "token_in": "0xb0F71e4a65baeF5ceC68184EFBDeD5e4FBaBF21B",
+      "token_out": "0x735F1Ba389D9D350501dB8FBbB5b52477DcaddA8",
+      "amount_in": 1000000000000000000,
+      "min_amount_out": 990000000000000000,
+      "rationale": "RuleDecider: Price (1.0144) is +1.44% vs 1h MA (1.0000). Triggering BUY.",
+      "confidence": 0.95
+    },
+    "rationale": "RuleDecider: Price (1.0144) is +1.44% vs 1h MA (1.0000). Triggering BUY.",
+    "timestamp": 1792321759,
+    "decision_hash": "0xa240d82d96df5848c6fd87f8d345fabbc8b7dc8d8e746aaab88b369b116d8cb1"
+  },
+  {
+    "signals": {
+      "token_in": "0xb0F71e4a65baeF5ceC68184EFBDeD5e4FBaBF21B",
+      "token_out": "0x735F1Ba389D9D350501dB8FBbB5b52477DcaddA8",
+      "price": 1.0252,
+      "moving_average_1h": 1.0,
+      "volume_24h": 150000.0,
+      "timestamp": 1792321760,
+      "is_mock": true,
+      "source": "MOCK-DETERMINISTIC"
+    },
+    "decision": {
+      "action": "BUY",
+      "token_in": "0xb0F71e4a65baeF5ceC68184EFBDeD5e4FBaBF21B",
+      "token_out": "0x735F1Ba389D9D350501dB8FBbB5b52477DcaddA8",
+      "amount_in": 50000000000000000000,
+      "min_amount_out": 50000000000000000000,
+      "rationale": "RED-TEAM ATTACK: Deliberately exceeding authorized perTradeLimit and dailyLimit.",
+      "confidence": 1.0
+    },
+    "rationale": "RED-TEAM ATTACK: Deliberately exceeding authorized perTradeLimit and dailyLimit.",
+    "timestamp": 1792321760,
+    "decision_hash": "0xcabddd21446721fc4526b4901b7fdd491c94c0c208e1cd99f831ee6e97745028"
+  }
+]
