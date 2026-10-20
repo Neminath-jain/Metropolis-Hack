@@ -18,5 +18,10 @@
     "agentId": 2372,
     "registrationTx": "0xd907eba3e05e28e36bfbd5048d4c22f4a566e09b42b5b231f0e4bb46e7fcef10"
   },
+  "owner": {
+    "address": "0xB37b83836b3863b3b8635d9DcDff5593030D56B2",
+    "rotatedFrom": "0xb5c78E2b5D4a5c3C3fB8F4dB3D5A3fbc5FFbC6fD",
+    "rotationTx": "0x724d88501378f3063459311a4e8410dd7a410ece43050a3fa1a1d7cf53409ddf"
+  },
   "verifiedExplorerUrl": "https://testnet.monadscan.com/address/0x10a59fbc6ffEebc8Fe17764C3e94Ba8136098618#code"
 }

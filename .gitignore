@@ -2,6 +2,8 @@
 .env
 .env.*
 *.env
+!.env.example
+!**/.env.example
 contracts/.env
 backend/.env
 *.pem
@@ -32,5 +34,9 @@ broadcast/
 # IDE / System
 .DS_Store
 Thumbs.db
-.vscode/
-.idea/
+# Testing & Audits
+test-results/
+playwright-report/
+frontend/screenshots/*.json
+frontend/screenshots/lighthouse*.json
+frontend/screenshots/report.json

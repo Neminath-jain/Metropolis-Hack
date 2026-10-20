@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
-from app.routers import health, agent
+from app.routers import health, agent, relay, faucet
 
 app = FastAPI(
     title="Aegis-Monad Reference Agent",
@@ -21,6 +21,8 @@ app.add_middleware(
 # Include routers
 app.include_router(health.router)
 app.include_router(agent.router)
+app.include_router(relay.router)
+app.include_router(faucet.router)
 
 
 @app.get("/")

@@ -134,19 +134,26 @@ Executed on Monad Testnet (`Chain ID: 10143`, RPC: `https://testnet-rpc.monad.xy
   - Tx: [`0x014087018a512b7ffbe0dcf1703a4de304915f203ccff272e4b00e2f1c48f7c2`](https://testnet.monadscan.com/tx/0x014087018a512b7ffbe0dcf1703a4de304915f203ccff272e4b00e2f1c48f7c2)
   - Spent: 1.0 mWMON -> Received: 1.0 mUSDT.
 
-### 3. Red-Team Attacks Blocked Onchain
+### 3. Red-Team Attacks Blocked Onchain (Stage 2 Scripted & Stage 4 Live Frontend)
+
+#### Stage 4 Live Frontend & API Security Verification:
 1. **Attack 1 (Over-Limit Spender)**:
-   - Requested 50.0 mWMON trade (per-trade cap: 2.0 mWMON).
-   - Tx: [`0xe7a49e332b77bd1dc0b397a0c0a37131da36e799ea7ffe7eecc96c1357518e27`](https://testnet.monadscan.com/tx/0xe7a49e332b77bd1dc0b397a0c0a37131da36e799ea7ffe7eecc96c1357518e27)
-   - Status: Blocked without reverting. Emitted `PolicyViolation` reason code `5` (`EXCEEDS_PER_TRADE`).
+   - Requested 1,000,000 mWMON trade (per-trade cap: 2.0 mWMON).
+   - Tx: [`0xfb49bade99f4edf9c9ef06069e76dd2909e838bd78fe6b0b27af54fa9a47db5a`](https://testnet.monadscan.com/tx/0xfb49bade99f4edf9c9ef06069e76dd2909e838bd78fe6b0b27af54fa9a47db5a)
+   - Status: Blocked without reverting (Receipt Status: `1`). Emitted `PolicyViolation` reason code `5` (`EXCEEDS_PER_TRADE`). User vault delta: `0.00 mWMON`.
 2. **Attack 2 (Bad Target / Venue)**:
    - Target directed to unauthorized `0x000000000000000000000000000000000000dEaD`.
-   - Tx: [`0x5af6e0be4c09791a27e7d93c9020870a98d6a5c7b963a5fb025f5553b6e34f7b`](https://testnet.monadscan.com/tx/5af6e0be4c09791a27e7d93c9020870a98d6a5c7b963a5fb025f5553b6e34f7b)
-   - Status: Blocked without reverting. Emitted `PolicyViolation` reason code `2` (`TARGET_NOT_ALLOWED`).
+   - Tx: [`0x5e5fc7c70bfafd93aa7f3f9f10cd0259e86d8f0e03d724364ad63154f5b312a8`](https://testnet.monadscan.com/tx/0x5e5fc7c70bfafd93aa7f3f9f10cd0259e86d8f0e03d724364ad63154f5b312a8)
+   - Status: Blocked without reverting (Receipt Status: `1`). Emitted `PolicyViolation` reason code `2` (`TARGET_NOT_ALLOWED`). User vault delta: `0.00 mWMON`.
 3. **Attack 3 (Bad Selector)**:
    - Calldata injected with unauthorized selector `0xdeadbeef`.
-   - Tx: [`0x6267f93cc5f8c8ce40968cbd888c530419b5c783fe17d2a48924417545cdade5`](https://testnet.monadscan.com/tx/6267f93cc5f8c8ce40968cbd888c530419b5c783fe17d2a48924417545cdade5)
-   - Status: Blocked without reverting. Emitted `PolicyViolation` reason code `3` (`SELECTOR_NOT_ALLOWED`).
+   - Tx: [`0xac449205bbb9821b4e966b865f801ad728913912a929246d451d9ac34b0fe0ff`](https://testnet.monadscan.com/tx/0xac449205bbb9821b4e966b865f801ad728913912a929246d451d9ac34b0fe0ff)
+   - Status: Blocked without reverting (Receipt Status: `1`). Emitted `PolicyViolation` reason code `3` (`SELECTOR_NOT_ALLOWED`). User vault delta: `0.00 mWMON`.
+
+#### Stage 2 Initial Scripted Runs:
+- Over-Limit Spender: [`0xe7a49e332b77bd1dc0b397a0c0a37131da36e799ea7ffe7eecc96c1357518e27`](https://testnet.monadscan.com/tx/0xe7a49e332b77bd1dc0b397a0c0a37131da36e799ea7ffe7eecc96c1357518e27) (`EXCEEDS_PER_TRADE`, 5)
+- Bad Target: [`0x5af6e0be4c09791a27e7d93c9020870a98d6a5c7b963a5fb025f5553b6e34f7b`](https://testnet.monadscan.com/tx/0x5af6e0be4c09791a27e7d93c9020870a98d6a5c7b963a5fb025f5553b6e34f7b) (`TARGET_NOT_ALLOWED`, 2)
+- Bad Selector: [`0x6267f93cc5f8c8ce40968cbd888c530419b5c783fe17d2a48924417545cdade5`](https://testnet.monadscan.com/tx/0x6267f93cc5f8c8ce40968cbd888c530419b5c783fe17d2a48924417545cdade5) (`SELECTOR_NOT_ALLOWED`, 3)
 
 ### 4. Passkey WebAuthn Lifecycle & Security Tests
 1. **P256 Key Registration**:

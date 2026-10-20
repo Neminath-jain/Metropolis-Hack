@@ -46,5 +46,293 @@
     "rationale": "RED-TEAM ATTACK: Deliberately exceeding authorized perTradeLimit and dailyLimit.",
     "timestamp": 1792321760,
     "decision_hash": "0xcabddd21446721fc4526b4901b7fdd491c94c0c208e1cd99f831ee6e97745028"
+  },
+  {
+    "signals": {
+      "token_in": "0x1111111111111111111111111111111111111111",
+      "token_out": "0x2222222222222222222222222222222222222222",
+      "price": 1.0252,
+      "moving_average_1h": 1.0,
+      "volume_24h": 150000.0,
+      "timestamp": 1792432843,
+      "is_mock": true,
+      "source": "MOCK-DETERMINISTIC"
+    },
+    "decision": {
+      "action": "BUY",
+      "token_in": "0x1111111111111111111111111111111111111111",
+      "token_out": "0x2222222222222222222222222222222222222222",
+      "amount_in": 1000000000000000000000000,
+      "min_amount_out": 1000000000000000000000000,
+      "rationale": "RED-TEAM ATTACK: Deliberately exceeding authorized perTradeLimit and dailyLimit.",
+      "confidence": 1.0
+    },
+    "rationale": "RED-TEAM ATTACK: Deliberately exceeding authorized perTradeLimit and dailyLimit.",
+    "timestamp": 1792432843,
+    "decision_hash": "0x3ae2da4611677006d0a48edfae82cb23df20abbd031599eb4d9cc32098a73e66"
+  },
+  {
+    "signals": {
+      "token_in": "0xBbBA05e4d10286Fdc21dEF5bbc674E6f9269bFa0",
+      "token_out": "0x8D410373B5e6B3927d5CeE0Cc99a8a62556D59dD",
+      "price": 1.0144,
+      "moving_average_1h": 1.0,
+      "volume_24h": 150000.0,
+      "timestamp": 1792434943,
+      "is_mock": true,
+      "source": "MOCK-DETERMINISTIC"
+    },
+    "decision": {
+      "action": "BUY",
+      "token_in": "0xBbBA05e4d10286Fdc21dEF5bbc674E6f9269bFa0",
+      "token_out": "0x8D410373B5e6B3927d5CeE0Cc99a8a62556D59dD",
+      "amount_in": 1000000000000000000,
+      "min_amount_out": 990000000000000000,
+      "rationale": "RuleDecider: Price (1.0144) is +1.44% vs 1h MA (1.0000). Triggering BUY.",
+      "confidence": 0.95
+    },
+    "rationale": "RuleDecider: Price (1.0144) is +1.44% vs 1h MA (1.0000). Triggering BUY.",
+    "timestamp": 1792434946,
+    "decision_hash": "0xd2d508913823a4ef5e50d6e0ca911c229829442e15c137a30de2d757823f9e4e"
+  },
+  {
+    "signals": {
+      "token_in": "0x1111111111111111111111111111111111111111",
+      "token_out": "0x2222222222222222222222222222222222222222",
+      "price": 1.0252,
+      "moving_average_1h": 1.0,
+      "volume_24h": 150000.0,
+      "timestamp": 1792434955,
+      "is_mock": true,
+      "source": "MOCK-DETERMINISTIC"
+    },
+    "decision": {
+      "action": "BUY",
+      "token_in": "0x1111111111111111111111111111111111111111",
+      "token_out": "0x2222222222222222222222222222222222222222",
+      "amount_in": 1000000000000000000000000,
+      "min_amount_out": 1000000000000000000000000,
+      "rationale": "RED-TEAM ATTACK: Deliberately exceeding authorized perTradeLimit and dailyLimit.",
+      "confidence": 1.0
+    },
+    "rationale": "RED-TEAM ATTACK: Deliberately exceeding authorized perTradeLimit and dailyLimit.",
+    "timestamp": 1792434955,
+    "decision_hash": "0x58300e7bf870ee1dfbe501ec9c8f7c8ce2f9747015bdbaa9037fc37f6f600912"
+  },
+  {
+    "signals": {
+      "token_in": "0xBbBA05e4d10286Fdc21dEF5bbc674E6f9269bFa0",
+      "token_out": "0x8D410373B5e6B3927d5CeE0Cc99a8a62556D59dD",
+      "price": 1.0299,
+      "moving_average_1h": 1.0,
+      "volume_24h": 150000.0,
+      "timestamp": 1792434960,
+      "is_mock": true,
+      "source": "MOCK-DETERMINISTIC"
+    },
+    "decision": {
+      "action": "BUY",
+      "token_in": "0xBbBA05e4d10286Fdc21dEF5bbc674E6f9269bFa0",
+      "token_out": "0x8D410373B5e6B3927d5CeE0Cc99a8a62556D59dD",
+      "amount_in": 1000000000000000000,
+      "min_amount_out": 990000000000000000,
+      "rationale": "RuleDecider: Price (1.0299) is +2.99% vs 1h MA (1.0000). Triggering BUY.",
+      "confidence": 0.95
+    },
+    "rationale": "RuleDecider: Price (1.0299) is +2.99% vs 1h MA (1.0000). Triggering BUY.",
+    "timestamp": 1792434963,
+    "decision_hash": "0x93268f20749238596bcbe0eb8e322ddca3e80f930d7ccbe924a1e67c7fdd6924"
+  },
+  {
+    "signals": {
+      "token_in": "0xBbBA05e4d10286Fdc21dEF5bbc674E6f9269bFa0",
+      "token_out": "0x8D410373B5e6B3927d5CeE0Cc99a8a62556D59dD",
+      "price": 1.0144,
+      "moving_average_1h": 1.0,
+      "volume_24h": 150000.0,
+      "timestamp": 1792486301,
+      "is_mock": true,
+      "source": "MOCK-DETERMINISTIC"
+    },
+    "decision": {
+      "action": "BUY",
+      "token_in": "0xBbBA05e4d10286Fdc21dEF5bbc674E6f9269bFa0",
+      "token_out": "0x8D410373B5e6B3927d5CeE0Cc99a8a62556D59dD",
+      "amount_in": 1000000000000000000,
+      "min_amount_out": 990000000000000000,
+      "rationale": "RuleDecider: Price (1.0144) is +1.44% vs 1h MA (1.0000). Triggering BUY.",
+      "confidence": 0.95
+    },
+    "rationale": "RuleDecider: Price (1.0144) is +1.44% vs 1h MA (1.0000). Triggering BUY.",
+    "timestamp": 1792486303,
+    "decision_hash": "0x7f8385e5647067d99c5480120cbabaa767ad6e5ced81af96f7192eecb88e8624"
+  },
+  {
+    "signals": {
+      "token_in": "0x1111111111111111111111111111111111111111",
+      "token_out": "0x2222222222222222222222222222222222222222",
+      "price": 1.0252,
+      "moving_average_1h": 1.0,
+      "volume_24h": 150000.0,
+      "timestamp": 1792486305,
+      "is_mock": true,
+      "source": "MOCK-DETERMINISTIC"
+    },
+    "decision": {
+      "action": "BUY",
+      "token_in": "0x1111111111111111111111111111111111111111",
+      "token_out": "0x2222222222222222222222222222222222222222",
+      "amount_in": 1000000000000000000000000,
+      "min_amount_out": 1000000000000000000000000,
+      "rationale": "RED-TEAM ATTACK: Deliberately exceeding authorized perTradeLimit and dailyLimit.",
+      "confidence": 1.0
+    },
+    "rationale": "RED-TEAM ATTACK: Deliberately exceeding authorized perTradeLimit and dailyLimit.",
+    "timestamp": 1792486305,
+    "decision_hash": "0x9aff0d8f91165684b46cba9d92652f5eadf822e4847f67bc1d762c2e7635e9e7"
+  },
+  {
+    "signals": {
+      "token_in": "0xBbBA05e4d10286Fdc21dEF5bbc674E6f9269bFa0",
+      "token_out": "0x8D410373B5e6B3927d5CeE0Cc99a8a62556D59dD",
+      "price": 1.0144,
+      "moving_average_1h": 1.0,
+      "volume_24h": 150000.0,
+      "timestamp": 1792488218,
+      "is_mock": true,
+      "source": "MOCK-DETERMINISTIC"
+    },
+    "decision": {
+      "action": "BUY",
+      "token_in": "0xBbBA05e4d10286Fdc21dEF5bbc674E6f9269bFa0",
+      "token_out": "0x8D410373B5e6B3927d5CeE0Cc99a8a62556D59dD",
+      "amount_in": 1000000000000000000,
+      "min_amount_out": 990000000000000000,
+      "rationale": "RuleDecider: Price (1.0144) is +1.44% vs 1h MA (1.0000). Triggering BUY.",
+      "confidence": 0.95
+    },
+    "rationale": "RuleDecider: Price (1.0144) is +1.44% vs 1h MA (1.0000). Triggering BUY.",
+    "timestamp": 1792488220,
+    "decision_hash": "0x3b79df5f37c5dba5a9d05a9e9f921d66f50c51f2719d09d559e5329405de80bb"
+  },
+  {
+    "signals": {
+      "token_in": "0xBbBA05e4d10286Fdc21dEF5bbc674E6f9269bFa0",
+      "token_out": "0x8D410373B5e6B3927d5CeE0Cc99a8a62556D59dD",
+      "price": 1.0252,
+      "moving_average_1h": 1.0,
+      "volume_24h": 150000.0,
+      "timestamp": 1792488232,
+      "is_mock": true,
+      "source": "MOCK-DETERMINISTIC"
+    },
+    "decision": {
+      "action": "BUY",
+      "token_in": "0xBbBA05e4d10286Fdc21dEF5bbc674E6f9269bFa0",
+      "token_out": "0x8D410373B5e6B3927d5CeE0Cc99a8a62556D59dD",
+      "amount_in": 1000000000000000000000000,
+      "min_amount_out": 1000000000000000000000000,
+      "rationale": "RED-TEAM ATTACK: Deliberately exceeding authorized perTradeLimit and dailyLimit.",
+      "confidence": 1.0
+    },
+    "rationale": "RED-TEAM ATTACK: Deliberately exceeding authorized perTradeLimit and dailyLimit.",
+    "timestamp": 1792488232,
+    "decision_hash": "0x66e31c8ede86905b311c42d101f2e23a90aed0cc6e0a2eb8a78d01698fc0a7bd"
+  },
+  {
+    "signals": {
+      "token_in": "0xBbBA05e4d10286Fdc21dEF5bbc674E6f9269bFa0",
+      "token_out": "0x8D410373B5e6B3927d5CeE0Cc99a8a62556D59dD",
+      "price": 1.0299,
+      "moving_average_1h": 1.0,
+      "volume_24h": 150000.0,
+      "timestamp": 1792488235,
+      "is_mock": true,
+      "source": "MOCK-DETERMINISTIC"
+    },
+    "decision": {
+      "action": "BUY",
+      "token_in": "0xBbBA05e4d10286Fdc21dEF5bbc674E6f9269bFa0",
+      "token_out": "0x8D410373B5e6B3927d5CeE0Cc99a8a62556D59dD",
+      "amount_in": 1000000000000000000,
+      "min_amount_out": 990000000000000000,
+      "rationale": "RuleDecider: Price (1.0299) is +2.99% vs 1h MA (1.0000). Triggering BUY.",
+      "confidence": 0.95
+    },
+    "rationale": "RuleDecider: Price (1.0299) is +2.99% vs 1h MA (1.0000). Triggering BUY.",
+    "timestamp": 1792488237,
+    "decision_hash": "0xc458939d36654365f10977ffc4f6a3d7279fe5e768db8e5b152739bff25d43a7"
+  },
+  {
+    "signals": {
+      "token_in": "0xBbBA05e4d10286Fdc21dEF5bbc674E6f9269bFa0",
+      "token_out": "0x8D410373B5e6B3927d5CeE0Cc99a8a62556D59dD",
+      "price": 1.0273,
+      "moving_average_1h": 1.0,
+      "volume_24h": 150000.0,
+      "timestamp": 1792491684,
+      "is_mock": true,
+      "source": "MOCK-DETERMINISTIC"
+    },
+    "decision": {
+      "action": "BUY",
+      "token_in": "0xBbBA05e4d10286Fdc21dEF5bbc674E6f9269bFa0",
+      "token_out": "0x8D410373B5e6B3927d5CeE0Cc99a8a62556D59dD",
+      "amount_in": 1000000000000000000000000,
+      "min_amount_out": 1000000000000000000000000,
+      "rationale": "RED-TEAM ATTACK: Deliberately exceeding authorized perTradeLimit and dailyLimit.",
+      "confidence": 1.0
+    },
+    "rationale": "RED-TEAM ATTACK: Deliberately exceeding authorized perTradeLimit and dailyLimit.",
+    "timestamp": 1792491684,
+    "decision_hash": "0xa12497d2c1ebf5bce04a7b059652192fbd0123dc8e8a240c61966234ef6b200f"
+  },
+  {
+    "signals": {
+      "token_in": "0xBbBA05e4d10286Fdc21dEF5bbc674E6f9269bFa0",
+      "token_out": "0x8D410373B5e6B3927d5CeE0Cc99a8a62556D59dD",
+      "price": 1.018,
+      "moving_average_1h": 1.0,
+      "volume_24h": 150000.0,
+      "timestamp": 1792491687,
+      "is_mock": true,
+      "source": "MOCK-DETERMINISTIC"
+    },
+    "decision": {
+      "action": "BUY",
+      "token_in": "0xBbBA05e4d10286Fdc21dEF5bbc674E6f9269bFa0",
+      "token_out": "0x8D410373B5e6B3927d5CeE0Cc99a8a62556D59dD",
+      "amount_in": 100000000000000000,
+      "min_amount_out": 90000000000000000,
+      "rationale": "RED-TEAM ATTACK: Calling unauthorized target address.",
+      "confidence": 1.0
+    },
+    "rationale": "RED-TEAM ATTACK: Calling unauthorized target address.",
+    "timestamp": 1792491687,
+    "decision_hash": "0x5db292b35499016941a33844224a6e40688b28798f75ae2a09cc9bbcb44efdd3"
+  },
+  {
+    "signals": {
+      "token_in": "0xBbBA05e4d10286Fdc21dEF5bbc674E6f9269bFa0",
+      "token_out": "0x8D410373B5e6B3927d5CeE0Cc99a8a62556D59dD",
+      "price": 1.0042,
+      "moving_average_1h": 1.0,
+      "volume_24h": 150000.0,
+      "timestamp": 1792491688,
+      "is_mock": true,
+      "source": "MOCK-DETERMINISTIC"
+    },
+    "decision": {
+      "action": "BUY",
+      "token_in": "0xBbBA05e4d10286Fdc21dEF5bbc674E6f9269bFa0",
+      "token_out": "0x8D410373B5e6B3927d5CeE0Cc99a8a62556D59dD",
+      "amount_in": 100000000000000000,
+      "min_amount_out": 90000000000000000,
+      "rationale": "RED-TEAM ATTACK: Calling disallowed function selector 0xdeadbeef.",
+      "confidence": 1.0
+    },
+    "rationale": "RED-TEAM ATTACK: Calling disallowed function selector 0xdeadbeef.",
+    "timestamp": 1792491688,
+    "decision_hash": "0x45d35861cc07dd8e8c2d1509e6df2e6c3e0e2aefa2c3d5c56d0205fc6ca9be36"
   }
 ]

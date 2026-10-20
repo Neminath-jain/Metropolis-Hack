@@ -279,7 +279,7 @@ export function extractCosePublicKey(attestationBuffer: ArrayBuffer): { qx: bigi
   let qx: bigint | undefined;
   let qy: bigint | undefined;
 
-  for (let i = 0; i < bytes.length - 35; i++) {
+  for (let i = 0; i <= bytes.length - 35; i++) {
     // Look for CBOR negative key -2 (0x21) followed by 32-byte byte string (0x58 0x20)
     if (bytes[i] === 0x21 && bytes[i + 1] === 0x58 && bytes[i + 2] === 0x20) {
       const xBytes = bytes.subarray(i + 3, i + 35);
@@ -328,8 +328,9 @@ export async function createPasskey(options?: {
       challenge,
       rp: {
         name: options?.rpName ?? "Aegis-Monad",
-        id: options?.rpId ?? window.location.hostname,
+        id: options?.rpId ?? (window.location.hostname === "127.0.0.1" ? "localhost" : window.location.hostname),
       },
+
       user: {
         id: userIdBuffer,
         name: options?.userName ?? "aegis-user@monad",

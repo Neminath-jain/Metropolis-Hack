@@ -66,8 +66,8 @@ def get_status():
 @router.post("/run-once", response_model=ExecutionResult)
 async def run_once(req: RunOnceRequest):
     # Default tokens if not specified
-    token_in = req.token_in or "0x1111111111111111111111111111111111111111"
-    token_out = req.token_out or "0x2222222222222222222222222222222222222222"
+    token_in = req.token_in or settings.token_a_address
+    token_out = req.token_out or settings.token_b_address
 
     # 1. Fetch market signals
     signals = signal_provider.get_signals(token_in, token_out)
@@ -132,8 +132,8 @@ async def red_team_attack(kind: AttackKind, req: AttackRequest):
             detail="Red-team demo attacks are disabled in configuration (DEMO_ATTACKS=false).",
         )
 
-    token_in = req.token_in or "0x1111111111111111111111111111111111111111"
-    token_out = req.token_out or "0x2222222222222222222222222222222222222222"
+    token_in = req.token_in or settings.token_a_address
+    token_out = req.token_out or settings.token_b_address
 
     signals = signal_provider.get_signals(token_in, token_out)
 

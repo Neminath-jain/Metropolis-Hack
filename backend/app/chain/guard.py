@@ -146,12 +146,21 @@ class AgentGuardClient:
         nonce = self.w3.eth.get_transaction_count(self.agent_address, "pending")
         gas_price = self.w3.eth.gas_price
 
+        # Estimate gas with tight 10% safety margin on Monad + hard cap
+        execute_fn = self.contract.functions.execute(execute_params)
+        try:
+            est_gas = execute_fn.estimate_gas({"from": self.agent_address})
+            gas_limit = min(int(est_gas * 1.10), settings.relayer_gas_cap)
+        except Exception:
+            # Fallback if simulation fails onchain (e.g. policy violations still cost ~120k gas)
+            gas_limit = 250_000
+
         # Build tx
-        tx = self.contract.functions.execute(execute_params).build_transaction(
+        tx = execute_fn.build_transaction(
             {
                 "from": self.agent_address,
                 "nonce": nonce,
-                "gas": 750_000,
+                "gas": gas_limit,
                 "gasPrice": gas_price,
                 "chainId": settings.chain_id,
             }

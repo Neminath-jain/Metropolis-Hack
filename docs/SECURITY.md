@@ -115,7 +115,19 @@ Users can never have their assets frozen by administrative pause.
 
 ---
 
-## 3. Audit Status & Disclaimer
+## 3. Administrative Key Roles & Ownership Architecture
+
+| Role | Address | Loaded in Backend? | Permissions / Boundary |
+| :--- | :--- | :--- | :--- |
+| **Contract Owner** | `0xB37b83836b3863b3b8635d9DcDff5593030D56B2` | **NO** (Isolated) | Holds administrative ownership of `AgentGuard.sol`. Rotated from deployer (`0xb5c78E2b...`) via onchain transaction `0x724d8850...`. Cannot access user vault funds, alter user balances, or modify user trading policies. |
+| **Demo User** | `0x91DD9d96344f000b5175a45589239dd658E4350d` | **NO** | Testnet user account demonstrating delegation, authorization, and deposits. |
+| **Public Relayer** | `0x4533A11943a11717933C007b3B7243dae59cE824` | **YES** (`RELAYER_PRIVATE_KEY`) | Pays gas to submit passkey-authenticated assertions. Whitelist-restricted to 4 verified methods (`registerPasskey`, `registerSessionWithPasskey`, `revokeSessionWithPasskey`, `withdrawWithPasskey`). Zero admin permissions. |
+| **Faucet** | `0x4533A11943a11717933C007b3B7243dae59cE824` | **YES** (`RELAYER_PRIVATE_KEY`) | Mints unbacked demo `MockERC20` testnet tokens via public unpermissioned `mint()` and deposits to user vaults. Zero contract owner privileges. |
+| **AI Agent (#2372)** | `0x19615D52EdfF1c18941FC5BcE83Fb5c4C5F28eFd` | **YES** (`AGENT_PRIVATE_KEY`) | Can only execute trades via `AgentGuard.executeAction()` if authorized by an active onchain session within user policy limits. |
+
+---
+
+## 4. Audit Status & Disclaimer
 
 > [!WARNING]
 > **UNAUDITED TESTNET SOFTWARE**
